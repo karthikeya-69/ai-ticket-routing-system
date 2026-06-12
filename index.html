@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#08111f">
 
 <title>AI Ticket Routing System</title>
 
@@ -32,12 +34,16 @@ font-family:'Space Grotesk',sans-serif;
 
 html{
 scroll-behavior:smooth;
+background-color:#08111f;
+color-scheme:dark;
 }
 
 body{
+background-color:#08111f;
 background:var(--bg);
 color:var(--text);
 overflow-x:hidden;
+min-height:100vh;
 }
 
 /* NAVBAR */
@@ -89,8 +95,8 @@ align-items:center;
 text-align:center;
 padding:120px 20px 60px;
 background:
-linear-gradient(#00d4ff0d 1px,transparent 1px),
-linear-gradient(90deg,#00d4ff0d 1px,transparent 1px);
+linear-gradient(rgba(0,212,255,0.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,212,255,0.05) 1px,transparent 1px);
 background-size:50px 50px;
 }
 
@@ -102,11 +108,13 @@ max-width:900px;
 font-size:clamp(3rem,7vw,5.8rem);
 line-height:1;
 margin-bottom:20px;
+color:var(--text);
 }
 
 .hero span{
 background:linear-gradient(90deg,var(--cyan),var(--purple));
 -webkit-background-clip:text;
+background-clip:text;
 color:transparent;
 }
 
@@ -140,7 +148,7 @@ color:black;
 
 .secondary{
 border:1px solid var(--border);
-color:white;
+color:var(--text);
 }
 
 .btn:hover{
@@ -159,6 +167,7 @@ padding:90px 20px;
 text-align:center;
 font-size:2.2rem;
 margin-bottom:10px;
+color:var(--text);
 }
 
 .section-sub{
@@ -180,6 +189,7 @@ overflow:hidden;
 padding:15px;
 background:var(--card2);
 border-bottom:1px solid var(--border);
+color:var(--text);
 }
 
 .demo-body{
@@ -198,16 +208,17 @@ margin-bottom:12px;
 border-radius:10px;
 background:var(--card2);
 border:1px solid var(--border);
-color:white;
+color:var(--text);
 cursor:pointer;
 transition:.3s;
 text-align:left;
+font-size:1rem;
 }
 
 .ticket:hover,
 .ticket.active{
 border-color:var(--cyan);
-background:#00d4ff20;
+background:rgba(0,212,255,0.12);
 }
 
 .classify{
@@ -219,6 +230,7 @@ border-radius:10px;
 font-weight:700;
 cursor:pointer;
 margin-top:10px;
+font-size:1rem;
 }
 
 .result{
@@ -236,6 +248,7 @@ padding:12px;
 background:var(--card2);
 margin-bottom:10px;
 border-radius:10px;
+color:var(--text);
 }
 
 .badge{
@@ -244,12 +257,12 @@ border-radius:30px;
 font-size:.85rem;
 }
 
-.finance{background:#ffb80030;color:var(--yellow);}
-.support{background:#00d4ff30;color:var(--cyan);}
-.engineering{background:#8b5cf630;color:#a78bfa;}
-.high{background:#ff4d6d30;color:var(--red);}
-.medium{background:#ffb80030;color:var(--yellow);}
-.low{background:#00e59930;color:var(--green);}
+.finance{background:rgba(255,184,0,0.18);color:var(--yellow);}
+.support{background:rgba(0,212,255,0.18);color:var(--cyan);}
+.engineering{background:rgba(139,92,246,0.18);color:#a78bfa;}
+.high{background:rgba(255,77,109,0.18);color:var(--red);}
+.medium{background:rgba(255,184,0,0.18);color:var(--yellow);}
+.low{background:rgba(0,229,153,0.18);color:var(--green);}
 
 /* FEATURES */
 
@@ -265,6 +278,7 @@ border:1px solid var(--border);
 padding:25px;
 border-radius:18px;
 transition:.3s;
+color:var(--text);
 }
 
 .card:hover{
@@ -274,6 +288,10 @@ border-color:var(--cyan);
 
 .card h3{
 margin:15px 0;
+}
+
+.card p{
+color:var(--muted);
 }
 
 /* FLOW */
@@ -290,6 +308,7 @@ padding:25px;
 border-radius:18px;
 border:1px solid var(--border);
 text-align:center;
+color:var(--text);
 }
 
 .step-number{
